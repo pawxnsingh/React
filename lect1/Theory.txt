@@ -1,0 +1,130 @@
+What is Emmet?
+            it is the built-in feature of the vscode to write the code element tag and attribute 
+            much much more efficiently 
+
+            you don't have to install any of the extension out there
+
+            it can prevent you write the code by your own 
+            by providing the abbrevation 
+            it is by deafult enabled by html css xml jsx and much more
+
+
+            1. creating the html tag by the tag by it name only
+
+            2. createing the element by it class/id name
+
+            3. creating the multiple element 
+                div 
+                    h1*4 then enter
+                /div
+            4. creating the nested element
+
+                div
+                    ul > h1*4 then enter
+                /div 
+
+            5. emmet in css
+                just normal in css
+
+
+
+
+Difference between a Library and Framework?
+        Library:-
+            A library is a collection of pre-written code, functions, and procedures that can be used by a programmer to perform specific tasks or operations.
+            Libraries provide reusable code components, often organized into functions or modules, which can be incorporated/injected into your application.
+            When you use a library, you retain control of the overall flow of your program. You decide when and how to use the functions provided by the library.
+            Libraries are typically "smaller in scope" and focus on specific, discrete functionalities, like parsing data, working with mathematical calculations, or interacting with hardware.
+
+        Framework:-
+            A framework is a broader, more comprehensive structure or set of tools and guidelines that dictate the overall architecture and organization of your application.
+            Frameworks provide a skeleton for your application and often dictate the flow of control. They define the structure, design patterns, and sometimes even the flow of your application.
+            When you use a framework, you generally need to adhere to its conventions and structure. Your code fits into the framework, and the framework manages the control flow.
+            Frameworks are typically larger in scope and are used for building entire applications or systems, such as web applications, mobile apps, or game engines
+
+
+
+What is CDN? Why do we use it?
+            CDN stands for content delivery network. 
+            It is a network of servers that are distributed around the world. 
+            When you visit a website that uses a CDN, the content of that website is 
+            delivered to you from the server that is closest to you. This can significantly 
+            improve the loading speed of the website, especially if you are 
+            located far away from the website's origin server.
+            this has alot of benefit:-
+
+            improved performance
+            reliablity
+            security
+
+
+
+
+Why is React known as React?
+        main purpose of designing the react as the Library to write the all hte html code in javascript
+        react name inspired from that the user interface should react to the change in data and render accordingly
+        another reason of using the react is
+        1. Reactive nature - automatically update the user interface
+        2  components based architecture react encourage the developer to break down the user interface into smaller and reuseable components
+
+        react uses the virtual dom, very lightweight in memory representation of the actual dom 
+        and this virtual dom is efficiently update the actual dom in performant way
+
+
+
+
+What is crossorigin in script tag?
+        The crossorigin attribute on the <script> tag specifies that CORS is 
+        supported when loading an external script file from a third-party
+        server or domain. CORS stands for "Cross-Origin Resource Sharing", 
+        and is a mechanism that allows resources on a web page to be requested 
+        from another domain outside their own domain.
+
+
+
+
+
+What is diference between React and ReactDOM why they are spiltted into two library
+        React is the javascript library and it used to create the interative UI
+        that is declarative and efficient in the based compoenent based fashion
+        this allow us to create the responsive compoenent
+
+        and ReactDOM is a complimentary library to react that allow you render the react compoenent
+        to the DOM and it provide number of method to interat with the dom
+
+        React is responsible for creating and managing your UI components, 
+        while ReactDOM is responsible for rendering those components to the DOM.
+
+        **Why are React and ReactDOM split into two libraries?**
+
+        There are a few reasons why React and ReactDOM are split into two libraries:
+
+        * **Modularity:** Splitting React and ReactDOM into two libraries makes them more modular and reusable. For example, you can use React to create UI components for native mobile apps using React Native, even though React Native does not use ReactDOM.
+        * **Performance:** Splitting React and ReactDOM into two libraries can improve the performance of React applications. This is because ReactDOM only needs to be included in web applications, not in native mobile apps or other types of applications.
+
+        Overall, React and ReactDOM are two complementary libraries that make it easy to build interactive and performant user interfaces.
+
+
+
+
+
+
+What is difference between react.development.js and react.production.js files via CDN?
+        The main difference between react.development.js and react.production.min.js 
+        is that the development build includes a number of features and tools that are 
+        useful for debugging and development, but which are not needed in production. 
+        These features and tools can add to the size of the JavaScript bundle 
+        and can also slow down the performance of the application.
+
+
+What is async and defer? - see my Youtube video
+
+        it is the script attribute that is used to 
+        The async and defer attributes on the <script> tag both allow the browser to continue parsing the HTML document while JavaScript files are being downloaded. However, they differ in when those files are executed.
+
+        Async: Scripts with the async attribute are executed as soon as they are available, regardless of the order in which they are loaded.
+        Defer: Scripts with the defer attribute are executed in the order in which they are loaded, but only after the HTML document has been parsed.
+        Which attribute you should use depends on your specific needs. If you need your scripts to be executed as soon as possible, 
+        such as if they are critical to the rendering of the page, then you should use the async attribute. However, 
+        if the order in which your scripts are executed is important, or if they are not critical to the rendering 
+        of the page, then you should use the defer attribute.
