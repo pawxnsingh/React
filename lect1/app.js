@@ -8,7 +8,7 @@
  *      </div>
  * </div>
  * 
-//  * suppose if we have to create the struture like this
+ * suppose if we have to create the struture like this
  * <div id="parent">
  *      <div id="child1">
  *          <h1>
@@ -45,8 +45,10 @@
 // the below code is core react
 // and jsx will make this code clean and maintainable when we have to create tag
 
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const parent1 = React.createElement(
+const parent = React.createElement(
     "div",
     {
         id: "parent",
@@ -67,33 +69,11 @@ const parent1 = React.createElement(
             React.createElement("h1", {}, "its is the h2 tag")
         ),
     ]
-);  
+);
 
 // but but but this makes our code more complex and clumsy
 // and that why jsx came into picture
 // this is the last element we will be using the react.createElement`
-
-// and we can write this message this way as well
-const heading1 = React.createElement(
-    "h1",
-    {},
-    "This is the h1 tag form complex"
-);
-
-const child = React.createElement(
-    "div",
-    {
-        id: "child",
-    },
-    heading1
-);
-const parent = React.createElement(
-    "div",
-    {
-        id: "heading",
-    },
-    child
-);
 
 // created the element using the React
 const heading = React.createElement(
@@ -118,4 +98,4 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // now render the heading element into the div container
 // console.log(root);
 // this render function will renders the heading object into the h1 html tag
-root.render(parent1);
+root.render(parent);

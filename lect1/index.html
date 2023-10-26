@@ -1,6 +1,6 @@
 <!-- emmet -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <!-- question:- what do you mean by meta tag  -->
         <!-- meta tags in the head section of the html document provide the metadata of the 
@@ -11,15 +11,17 @@
         <!-- <meta charset="UTF-8" /> -->
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 
-        <!-- <link rel="stylesheet" href="index.css"> -->
+        <link rel="stylesheet" href="index.css">
         <title>Namaste React</title>
     </head>
     <body>
         <!-- using the html to buld the hello world program -->
         <div id="root">
-            <!-- <h1>Hello World</h1> -->
-            NOT RENDERED
+            <h1>Hello World</h1>
+            <!-- NOT RENDERED -->
         </div>
+
+
         <!-- building the hello world program using the javascript -->
         <!-- <script>
             const heading = document.createElement("h1");
@@ -27,30 +29,34 @@
             const root = document.getElementById("root");
             root.appendChild(newEle);
         </script> -->
+
+
         <!-- now building the hello world program using the react -->
         <!-- now how javascript know render the document.function_Name -->
         <!-- it the the webAPI provided by browser to change the document -->
         <!-- does browser understand the react and the answer is no -->
         <!-- we have to load the react code into the files from the third party server-->
         <!-- first way is by using the CDN(content delivery networks) Server -->
-        <script
-            crossorigin
-            src="https://unpkg.com/react@18/umd/react.development.js"
-        >
-            // this the core javascript library that are injected to the code
-            // and we had got the "React" and "ReactDOM" in the code
-            // we have to use these superpower to large scale production application
-        </script>
 
-        <script
-            crossorigin
-            src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-        >
-            // this is the react DOM file that is used to connect
-            // the react element to the html file this act as the bridge
-        </script>
 
-        <script src="app.js"></script>
+
+
+        <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"> </script> -->
+
+            <!-- this the core javascript library that are injected to the code
+            and we had got the "React" and "ReactDOM" in the code
+            we have to use these superpower to large scale production application -->
+        <!-- this is not a good way to inject the react package into the code -->
+
+        <!-- <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"> </script> -->
+
+            <!-- this is the react DOM file that is used to connect -->
+            <!-- the react element to the html file this act as the bridge -->
+
+
+
+
+        <script type="module" src="./app.js"></script>
         <!-- and the order of the files should matter -->
     </body>
 </html>
