@@ -1,0 +1,47 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #27060692;
+    /* color: #fff; */
+    padding: 10px;
+  }
+  
+.header-left {
+    flex: 0.2;
+}
+  
+  .header-logo {
+    width: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  
+  .header-middle {
+    flex: 0.6;
+  }
+  
+  .search-bar{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #444;
+    color: #fff;
+    outline: none;
+  }
+  
+  .header-right {
+    flex: 0.2;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .user-logo {
+    width: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  

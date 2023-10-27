@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "This is Sat Shri Akal React by Pawan Singh",
   "scripts": {
+    "start":"parcel lect1/index.html",
+    "build":"parcel build lect1/index.html",
     "test": "jest"
   },
   "repository": {
