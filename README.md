@@ -73,3 +73,14 @@ Tree shaking relies on the use of ES6 modules and the `import` and `export` stat
 
 -   This allows you to use features like import and export to load
 -   and export functions, classes, or variables between different script files.
+
+
+
+
+# Warning: Each child in a list should have a unique "key" prop.
+- The warning "Each child in a list should have a unique 'key' prop" is a common warning you might encounter when working with React, 
+a popular JavaScript library for building user interfaces. This warning is specific to the rendering of lists of elements in React, 
+typically when using the map function to generate a list of components.In React, when you render a list of elements, 
+each element in the list should have a unique key prop assigned to it. The key prop helps React efficiently update and 
+re-render components in the list when changes occur, such as additions, removals, or reordering of items. 
+The key prop should be a unique identifier for each item in the list.
