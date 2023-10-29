@@ -1945,19 +1945,39 @@ const resList = [
 
 const ResCard = (props) => {
     // console.log(props);
+    // that called destructuring data on the fly
+
+    // The code `const { resData } = props;` is a React destructuring assignment statement.
+    // It is used to extract the `resData` property from the `props` object and assign it to the variable `resData`.
+    // This can be useful for simplifying code and making it more readable.
+    // Here is an example of how the code might be used:
+
+    // ```javascript
+    // // props contains the following object:
+    // props = {
+    //   resData: {
+    //     name: 'John Doe',
+    //     age: 30,
+    //   },
+    // };
+
+    // // Destructure the resData property from the props object:
+    // const { resData } = props;
+    // // Now the resData variable contains the following object:
+    // resData = {
+    //   name: 'John Doe',
+    //   age: 30,
+    // };
+
+    // Destructuring assignment statements can be used to destructure any type of object, including arrays and strings. They can also be used to destructure nested objects.
+    // this is extracting resData from props
     const { resData } = props;
+    // this statement mean extracting the resData from the props
 
     // optional chaining
-    const {
-        cloudinaryImageId,
-        name,
-        cuisines,
-        address
-
-    } = resData?.data;
-
-
-
+    // and using the resData to extract the more value
+    const { cloudinaryImageId, name, cuisines, address } = resData?.data;
+    // what is optional chaining mean extracting the data but with some addtional layer of error reduction
     return (
         <div className="res-card">
             <div className="img-container">
@@ -1972,7 +1992,7 @@ const ResCard = (props) => {
 
             <div className="res-detail-container">
                 <div className="name">{name}</div>
-
+                
                 <div className="res-sub-text">
                     <div>
                         <svg
@@ -2005,10 +2025,7 @@ const ResCard = (props) => {
                                     gradientUnits="userSpaceOnUse"
                                 >
                                     <stop stopColor="#21973B"></stop>
-                                    <stop
-                                        offset="1"
-                                        stopColor="#128540"
-                                    ></stop>
+                                    <stop offset="1" stopColor="#128540"></stop>
                                 </linearGradient>
                             </defs>
                         </svg>
@@ -2020,9 +2037,7 @@ const ResCard = (props) => {
                 </div>
 
                 <div className="res-description-container">
-                    <div className="cuisine">
-                        {cuisines.join(", ")}
-                    </div>
+                    <div className="cuisine">{cuisines.join(", ")}</div>
                     <div className="address">{address}</div>
                 </div>
             </div>
@@ -2046,11 +2061,14 @@ const Body = () => {
                 {/* when we have to write the javascript inside jsx use curly braces */}
 
                 {resList.map((restaurant) => (
-                    <ResCard key={restaurant.data.id} resData={restaurant} /> 
+                    <ResCard key={restaurant.data.id} resData={restaurant} />
                 ))}
 
                 {/* instead of using this we can use the map function in order to make our code reusable */}
                 {/* <ResCard resData={resList[0]}/>
+                            // where resData is the propName and we had pass the value to it as an object
+                <MyComponent propName="value" />
+                    In this example, the propName is a prop, and its value is set to "value."
                 <ResCard resData={resList[1]}/>
                 <ResCard resData={resList[2]}/>
                 <ResCard resData={resList[3]}/>
