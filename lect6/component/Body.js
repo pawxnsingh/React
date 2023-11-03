@@ -48,7 +48,7 @@ const Body = () => {
             {/* search bar and search button */}
             <div className="utility-container">
                 <div>
-                
+                    
                     <input
                         className="search-box"
                         type="text"
@@ -63,11 +63,7 @@ const Body = () => {
                         // This allows you to keep the component's state in sync with the user's input, making it a controlled component.
                     />
                 </div>
-
-                {
-                    console.log("istopped in ")
-                }
-
+                {console.log("istopped in ")}
                 <div>
                     <button
                         className="search-button"
